@@ -1,0 +1,22 @@
+{
+  "name": "lib",
+  "homepage": "https://github.com/basictom/mushroom-mania",
+  "authors": [
+    "Thomas Fitzgerald <tpfitz42@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "angular": "^1.6.4"
+  }
+}
