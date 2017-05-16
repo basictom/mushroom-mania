@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Angular</title>
+  <title>Mushroom Mania</title>
   <link rel="stylesheet" href="./lib/bower_components/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="./styles/main.css" />
 </head>
-<body>
+<body ng-app="MushroomApp">
+
+  <div class="container" ng-controller="ItemCtrl">
+    <div class="jumbotron">
+      <h3>Mushroom Mania</h3>
+      <div class="col-xs-6 col-xs-offset-6 radios">
+        <input type="text" placeholder="Mushroom" ng-model="searchText" />
+        <input type="radio" name="poison" ng-model="poison" ng-value="true" />Poisonous
+        <input type="radio" name="poison" ng-model="poison" ng-value="false" />Non-Poisonous
+      </div>
+    </div>
+    <div class="row">
+      <div class="poison-output" ng-repeat="shrooms in shrooms | filter:{edible:poison} | filter:{name:searchText}">
+        <div class="col-xs-4">
+          <p>{{shrooms.name}}</p>
+          <p>{{shrooms.edible}}</p>
+          <p>{{shrooms.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
